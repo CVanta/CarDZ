@@ -13,4 +13,12 @@ public interface Positioned {
      * Текущее местоположение
      */
     Position getPosition();
+
+
+    /**
+     * Изменить местоположение
+     * @param person
+     */
+
+    void moveTo(Person person);
 }
