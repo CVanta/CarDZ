@@ -19,6 +19,5 @@ public interface Positioned {
      * Изменить местоположение
      * @param person
      */
-
     void moveTo(Person person);
 }

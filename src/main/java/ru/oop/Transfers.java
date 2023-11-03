@@ -17,6 +17,5 @@ public class Transfers {
      */
 
     public List<Transport> getPathList(Person person, Position destination){
-
     }
 }
