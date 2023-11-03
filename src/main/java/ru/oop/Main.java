@@ -56,4 +56,5 @@ public class Main {
         if(person.getPosition() != destination) person.walk(destination);
         assert person.getPosition() == destination;
     }
+
 }

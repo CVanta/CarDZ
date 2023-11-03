@@ -8,4 +8,5 @@ package ru.oop;
  */
 public interface Position {
     // Нам не важно что тут внутри
+
 }

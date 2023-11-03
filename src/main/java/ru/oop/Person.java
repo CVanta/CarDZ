@@ -14,5 +14,4 @@ public interface Person extends Positioned{
      * @param destination место назначения
      */
     void walk(Position destination);
-
 }

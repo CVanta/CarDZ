@@ -31,4 +31,5 @@ public class Bus implements Transport {
     public void moveTo(Person person) {
 
     }
+
 }

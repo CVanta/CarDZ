@@ -25,7 +25,6 @@ public class Car implements Transport{
      * Изменяет свою позицию и позицию person.
      * @return
      */
-
     @Override
     public void moveTo(Person person) {
 
