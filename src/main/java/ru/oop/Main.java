@@ -36,6 +36,16 @@ import java.util.List;
 public class Main {
 
     /**
+     * Переехать из текущего места в заданную точку
+     */
+    public static void moveTo(Person person, Position destination) {
+        Car car =  new Car();
+        car.moveTo(person);
+        person.walk(destination);
+        assert person.getPosition() == destination;
+    }
+
+    /**
      *Добраться до заданной точки на любом виде транспорта
      */
 
