@@ -36,6 +36,28 @@ import java.util.List;
 public class Main {
 
     /**
+     * Переехать из текущего места в заданную точку
+     */
+    public static void moveTo(Person person, Position destination) {
+        Car car =  new Car();
+        car.moveTo(person);
+        person.walk(destination);
+        assert person.getPosition() == destination;
+    }
+
+    /**
+     *Добраться до заданной точки на любом виде транспорта
+     */
+
+    public static void moveTo2(Person person, Position destination, Transport transport) {
+        if(person.getPosition() != transport.getPosition())
+            person.walk(transport.getPosition());
+        transport.moveTo(person);
+        if(person.getPosition() != destination)
+            person.walk(destination);
+    }
+
+    /**
      * Мы получаем список транспорта на котором нам<br>
      * необходимо доехать до конечной точки.<br>
      * Проверяем нужно ли нам идти пешком до 1 в списке транспорта,<br>
@@ -45,15 +67,16 @@ public class Main {
      * Если нет, то идем до конца пешком.<br>
      *
      */
-    public static void moveTo(Person person, Position destination) {
-
+    public static void moveTo3(Person person, Position destination) {
         Transfers transfers = new Transfers();
         List<Transport> path = transfers.getPathList(person, destination);
-        if(path.get(0).getPosition() != person.getPosition()) person.walk(path.get(0).getPosition());
+        if(path.get(0).getPosition() != person.getPosition())
+            person.walk(path.get(0).getPosition());
         for(Transport transport: path){
             transport.moveTo(person);
         }
-        if(person.getPosition() != destination) person.walk(destination);
+        if(person.getPosition() != destination)
+            person.walk(destination);
         assert person.getPosition() == destination;
     }
 }
